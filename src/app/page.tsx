@@ -62,7 +62,7 @@ export default function Home() {
   ];
 
   const bootsLengthVariable: BootsLengthVariable[] = [
-    { id: 1, name: "bootsLength1", value: "-230" },
+    { id: 1, name: "bootsLength1", value: "<230" },
     { id: 2, name: "bootsLength2", value: "231-250" },
     { id: 3, name: "bootsLength3", value: "251-270" },
     { id: 4, name: "bootsLength4", value: "271-290" },
@@ -79,18 +79,21 @@ export default function Home() {
   ];
 
   const ageVariable: AgeVariable[] = [
-    { id: 1, name: "age1", value: "10-49" },
-    { id: 2, name: "age2", value: "<10 - >=50" },
+    { id: 1, name: "age1", value: "<=10" },
+    { id: 2, name: "age2", value: "11-49" },
+    { id: 3, name: "age3", value: ">=50" },
   ];
 
   return (
     <div className="flex py-14 items-center justify-center bg-gray-900 text-white">
       <main className="space-y-3 max-w-[90%]">
-        <h1 className="font-bold text-2xl">CACULATE DIN</h1>
+        <h1 className="font-bold text-2xl text-center md:text-left">
+          CACULATE DIN
+        </h1>
         <WeightForm weightVariable={weightVariable} />
         <HeightForm heightVariable={heightVariable} />
         <BootsLenghtForm bootsLengthVariable={bootsLengthVariable} />
-        <div className="flex space-x-5">
+        <div className="flex flex-col  md:space-x-5 md:flex-row">
           <SkiLevelForm skiLevelVariable={skiLevelVariable} />
           <AgeForm ageVariable={ageVariable} />
           <Result />
