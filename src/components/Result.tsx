@@ -1,20 +1,19 @@
 "use client";
 
-import ExpectedResult from "./ExpectedResult";
+import { useDataSkierStore } from "@/store/dataskier";
+import { getSkierDIN } from "@/calculDIN/getSkierDIN";
 
 function Result() {
+  const dataSkier = useDataSkierStore((state) => state.dataSkier);
+  const calculatedResult = getSkierDIN(dataSkier);
+
   return (
-    <div className="bg-gray-800 p-6 w-full rounded-md space-y-2">
+    <div className="bg-gray-700 p-5 w-[98%] md:w-full rounded-md space-y-2 flex justify-between items-center shadow-2xl">
       <h2 className="font-bold text-center md:text-left text-lg">{`RESULT`}</h2>
       <div className="flex justify-between items-end">
-        {/* <div>
-          <h3>{`Weight: ${dataSkier.weight} kg`}</h3>
-          <h3>{`Height: ${dataSkier.height} cm`}</h3>
-          <h3>{`Boots Length: ${dataSkier.bootsLength} mm`}</h3>
-          <h3>{`Ski Level: ${dataSkier.skiLevel}`}</h3>
-          <h3>{`Age: ${dataSkier.age} years`}</h3>
-        </div> */}
-        <ExpectedResult />
+        <p className="text-white  text-center md:text-left w-full text-3xl font-bold">
+          {calculatedResult}
+        </p>
       </div>
     </div>
   );

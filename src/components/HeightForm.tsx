@@ -1,5 +1,6 @@
 "use client";
-import { HeightVariable } from "@/app/page";
+
+import { HeightVariable } from "@/data/varaibles";
 import { useDataSkierStore } from "@/store/dataskier";
 
 interface IProps {

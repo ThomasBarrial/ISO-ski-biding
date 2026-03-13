@@ -1,6 +1,6 @@
-import skierSettings, { skierSettingsLevelAge } from "../../../skierSettings";
+import skierSettings, { skierSettingsLevelAge } from "../data/skierSettings";
 
-export function getSkierSettings(data: {
+export function getSkierDIN(data: {
   weight: string;
   height: string;
   age: string;

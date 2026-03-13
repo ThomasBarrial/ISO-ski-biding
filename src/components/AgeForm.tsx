@@ -1,6 +1,6 @@
 "use client";
 
-import { AgeVariable } from "@/app/page";
+import { AgeVariable } from "@/data/varaibles";
 import { useDataSkierStore } from "@/store/dataskier";
 
 function AgeForm({ ageVariable }: { ageVariable: AgeVariable[] }) {
@@ -10,7 +10,7 @@ function AgeForm({ ageVariable }: { ageVariable: AgeVariable[] }) {
   return (
     <div className="bg-gray-800 p-3 md:p-6 w-full rounded-md space-y-2">
       <h2 className="font-bold text-lg">{`AGE`}</h2>
-      <div className="flex space-x-2 md:space-x-3 space-y-3 flex-wrap w-full justify-center md:justify-start">
+      <div className="flex space-x-2 md:space-x-3 space-y-3 md:space-y-0 flex-wrap w-full justify-center md:justify-start">
         {ageVariable.map((age) => (
           <div key={age.id}>
             <button

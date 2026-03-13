@@ -1,5 +1,5 @@
 "use client";
-import { BootsLengthVariable } from "@/app/page";
+import { BootsLengthVariable } from "@/data/varaibles";
 import { useDataSkierStore } from "@/store/dataskier";
 
 interface IProps {

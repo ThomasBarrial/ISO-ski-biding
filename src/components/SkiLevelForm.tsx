@@ -1,6 +1,6 @@
 "use client";
 
-import { SkiLevelVariable } from "@/app/page";
+import { SkiLevelVariable } from "@/data/varaibles";
 import { useDataSkierStore } from "@/store/dataskier";
 
 interface IProps {
