@@ -8,7 +8,7 @@ function Result() {
   const calculatedResult = getSkierDIN(dataSkier);
 
   return (
-    <div className="bg-gray-700 p-4 w-[95%] md:w-full rounded-xl space-y-2 flex justify-between items-center shadow-2xl">
+    <div className="bg-gray-700 p-4 w-[95%] md:w-full md:rounded-md rounded-xl space-y-2 flex justify-between items-center shadow-2xl">
       <div className="w-10/12">
         <h2 className="font-bold text-lg">{`RESULT`}</h2>
         <h3 className="text-xs">Provide your informations to get a result</h3>
